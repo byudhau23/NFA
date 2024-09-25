@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registration</title>
+    <link rel="stylesheet" href="formStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"
+</head>
+<body>
+    <fieldset>
+        <legend>Registration Form</legend>
+        <form action="" method="post">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" required minlength="3" placeholder="Enter Your Name">
+        
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" required minlength="8" placeholder="Enter Your Password">
+            
+            <label for="birth">Date of Birth: </label>
+            <input type="date" name="birth" id="birth" required>
+            
+            <label>Gender: </label>
+            <input type="radio" id="male" name="gender" value="Male" required>Male
+            <input type="radio" id="female" name="gender" value="Famale" required>Famale
+
+            <label for="no">Telephone Number: </label>
+            <input type="tel" name="no" id="no" required pattern="[0-9]{10-14}" placeholder="Enter Your Number">
+
+            <label for="photo">Upload Your Photo Profile: </label>
+            <input type="file" name="photo" id="photo" accept="image/*">
+
+            <label>
+                <input type="checkbox" name="terms" id="terms" required>
+                <small>I agree to the Terms and Conditions</small> 
+            </label>
+            <input class="submit" type="submit" value="Submit">
+        </form>
+    </fieldset>
+</body>
+</html>

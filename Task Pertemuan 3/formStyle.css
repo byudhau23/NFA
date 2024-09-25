@@ -1,0 +1,38 @@
+body {
+    background-image: url('./image/dd.jpg');
+    background-position: center;
+    margin: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins"
+}
+
+fieldset {
+    width: 300px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    background-color: #F5F5F7;
+}
+
+legend {
+    font-size: xx-large;
+    color: orange;
+}
+
+form {
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.submit {
+    background-color: #399918;
+    font-weight: 600;
+    width: 300px;
+}
+  
