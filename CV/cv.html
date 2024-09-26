@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    .container {
+        width: 800px;
+        margin: 0 auto; 
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .header-info {
+        margin-left: 20px;
+    }
+
+    header h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    header h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: blue;
+    }
+
+    section#about {
+        margin-bottom: 20px;
+    }
+
+    #about h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #about p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: black;
+    }
+
+    section.experience {
+        margin-bottom: 20px;
+    }
+
+    .experience h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .job {
+        margin-bottom: 15px;
+    }
+
+    .job h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .job p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    section.education {
+        margin-bottom: 20px;
+    }
+
+    .education h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .education-item h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .education-item p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    section.skills {
+        margin-bottom: 20px;
+    }
+
+    .skills h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .skills ul {
+        list-style-type: none;
+    }
+
+    .skills ul li {
+        font-size: 16px;
+        background-color: #e0e0e0;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer p {
+        color: #777;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-pic">
+                <img src="profile.jpg" alt="Profile Picture">
+            </div>
+            <div class="header-info">
+                <h1>Bimo Yudha Utama</h1>
+                <h2>Web Development</h2>
+                <p>Email: byu23@gmail.com | Telepon: +62 8873923862837</p>
+                <p>Alamat: Jl. Ahmad Gani No.234 Rt.10/03</p>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2><u>Tentang Saya</u></h2>
+            <p>Saya adalah seorang profesional di bidang Web Development. Saya dapat bekerja sebagai tim, mudah beradaptasi dalam pekerjaan, dan saya siap kerja dibawah tekanan</p>
+        </section>
+
+        <section class="experience">
+            <h2><u>Pengalaman Kerja</u></h2>
+            <div class="job">
+                <h3>PT. Puspa Catering</h3>
+                <p><strong>Posisi:</strong>Waiters</p>
+                <p><strong>Durasi:</strong> Januari 2020 - Sekarang</p>
+                <p><strong>Deskripsi:</strong> Tanggung jawab pekerjaan, pencapaian, dan hal penting lainnya yang Anda lakukan.</p>
+            </div>
+        </section>
+
+        <section class="education">
+            <h2><u>Pendidikan</u></h2>
+            <div class="education-item">
+                <h3>Sekolah Tinggi Teknologi Terpadu Nurul Fikri</h3>
+                <p><strong>Program Studi:</strong>Teknik Informatika</p>
+                <p><strong>Durasi:</strong> 2015 - 2019</p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2><u>Keahlian</u></h2>
+            <ul>
+                <li>Bahasa Inggris Passive</li>
+                <li>Laravel</li>
+                <li>React JS</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 @byu_23.</p>
+        </footer>
+    </div>
+</body>
+</html>
