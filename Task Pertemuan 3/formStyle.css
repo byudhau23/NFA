@@ -22,7 +22,10 @@ legend {
 
 form {
     margin: 0 auto;
-    border-radius: 10px;
+}
+
+input {
+    border-radius: 2.5px;
 }
 
 label {
@@ -31,8 +34,12 @@ label {
 }
 
 .submit {
-    background-color: #399918;
-    font-weight: 600;
+    background-color: #4caf50;
+    color: white;              
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
     width: 300px;
+    border-radius: 10px;
 }
   
