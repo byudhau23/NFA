@@ -1,0 +1,70 @@
+.container1 {
+  display: inline;
+}
+
+.Header {
+  width: 1287px;
+  height: 90px;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  background-color: yellow;
+  border: 1px solid black;
+}
+.container2 {
+    display: inline;
+  }
+.navMenu {
+  width: 1287px;
+  height: 90px;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  border: 1px solid black;
+  background-color: orangered;
+}
+
+.container3 {
+  display: inline-flex;
+}
+
+.ContentLeft {
+  width: 200px;
+  height: 700px;
+  margin-top: 1em;
+  margin-left: 1em;
+  background-color: green;
+  border: 1px solid black;
+}
+
+.MainContent {
+  width: 850px;
+  margin-top: 1em;
+  margin-left: 1em;
+  border: 1px solid black;
+  background-color: lightgrey;
+}
+
+.ContentRight{
+  width: 200px;
+  height: 700px;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 2em;
+  border: 1px solid black;
+  background-color: cyan;
+}
+
+.container4 {
+  display: inline;
+}
+
+.Footer {
+  width: 1287px;
+  height: 90px;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  background-color: brown;
+  border: 1px solid black;
+}
