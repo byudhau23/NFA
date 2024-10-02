@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung luas dan keliling lingkaran</title>
+</head>
+<body>
+    <script>
+        function hitungLuasLingkaran(r) {
+            let pi = 3.14;
+            let luas = pi * r * r;
+            return luas;
+        }
+        function hitungKelilingLingkaran(r) {
+            let pi = 3.14;
+            let keliling = 2 * pi * r;
+            return keliling;
+        }
+
+        let r = 12; 
+        let luas = hitungLuasLingkaran(r);
+        let keliling = hitungKelilingLingkaran(r);
+
+        console.log("Luas Lingkaran: " + luas);
+        console.log("Keliling Lingkaran: " + keliling);
+
+    </script>
+</body>
+</html>

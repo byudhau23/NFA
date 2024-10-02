@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas</title>
+</head>
+<body>
+    <script>
+        // Function declaration menghitung luas persegi panjang
+        function persegiPanjang(p, l) {
+            //Rumus luas persegi panjang = p * l
+            const luas = p * l;
+            return `Luas persegi panjang dengan panjang ${p} dan lebar ${l} = ${luas}`;
+        }
+            // Arrow function menghitung luas lingkaran
+            const lingkaran = (r) => {
+                // Rumus luas lingkaran = phi * r * r
+                const luas = Math.PI * Math.pow(r, 2);
+                return `Luas lingkaran dengan jari-jari ${r} = ${luas.toFixed(2)}`;
+            };
+
+            // Contoh pemanggilan function declaration luas persegi panjang
+            const p = 20;
+            const l = 10;
+            console.log(persegiPanjang(p, l));
+
+            // Contoh pemanggilan arrow function luas lingkaran
+            const r = 15
+            console.log(lingkaran(r));
+    </script>
+</body>
+</html>
