@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menggunakan Pendekatan Switch Case</title>
+</head>
+<body>
+    <script>
+        function gajiBersih(golongan, menikah) {
+            let gaji;
+
+            switch(golongan) {
+                case 1: 
+                    gaji = 10000000;
+                    break;
+                case 2: 
+                    gaji =  15000000;
+                        if (menikah) {
+                            gaji += 2000000;
+                        }
+                    break;
+                case 3: 
+                    gaji = 200000000;
+                    break;
+                default:
+                    return "Golongan tidak valid.";
+            }
+            return gaji;
+        }
+
+         // Mendefinisikan variabel golongan dan menikah
+        let golongan = 2;
+        let menikah = true;
+
+        console.log(gajiBersih(golongan, menikah));
+    </script>
+</body>
+</html>
