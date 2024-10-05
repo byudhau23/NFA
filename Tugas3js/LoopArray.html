@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas3</title>
+    <style>
+        table {
+            margin: auto;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        th {
+            background-color: #D3EE98;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let siswa = [
+            {'nama' : 'Jack', 'nilai' : 80},
+            {'nama': 'Max', 'nilai': 92},
+            {'nama': 'Cici', 'nilai': 67},
+            {'nama': 'Ney', 'nilai': 45},
+            {'nama': 'Bimo', 'nilai': 29}
+        ];
+
+        let infoGrade = [
+            {min: 85, grade: 'A', predikat: 'Sangat Baik'},
+            {min: 75, grade: 'B', predikat: 'Baik'},
+            {min: 60, grade: 'C', predikat: 'Cukup'},
+            {min: 30, grade: 'D', predikat: 'Kurang'},
+            {min: 0, grade: 'E', predikat: 'Sangat Kurang'}
+        ];
+
+        function getGrade_Predikat(nilai) {
+            return infoGrade.find(info => nilai >= info.min);
+        }
+
+        document.write('<table border="1" cellpadding="5" cellspacing="0">');
+        document.write('<tr><th>No</th><th>Nama</th><th>Nilai</th><th>Keterangan</th><th>Grade</th><th>Predikat</th></tr>');
+
+        siswa.forEach((s, index) => {
+            let  lulus = s.nilai > 60 ? 'Lulus' : 'Tidak Lulus';
+            let { grade, predikat } = getGrade_Predikat(s.nilai);
+
+            document.write(`
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${s.nama}</td>
+                    <td>${s.nilai}</td>
+                    <td>${lulus}</td>
+                    <td>${grade}</td>
+                    <td>${predikat}</td>
+                </tr>
+            `);
+        });
+
+        document.write('</table>');
+    </script>
+</body>
+</html>
