@@ -1,0 +1,71 @@
+Lenovo@DESKTOP-LHD7PQ2 c:\xampp
+# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use dbpostsib7
+Database changed
+MariaDB [dbpostsib7]> DELIMITER $$
+MariaDB [dbpostsib7]> CREATE PROCEDURE pro_naikan_harga(IN jenis_produk INT, IN persentase_kenaikan INT)
+    -> BEGIN UPDATE produk SET harga_jual = harga_jual + (harga_jual * pereaentase_kenaikan / 100)
+    -> WHERE jenis_produk_id = jenis_produk;
+    -> END $$
+Query OK, 0 rows affected (0.012 sec)
+
+MariaDB [dbtransaksi]> DELIMITER ;
+MariaDB [dbtransaksi]> DELIMITER $$
+MariaDB [dbtransaksi]> CREATE FUNCTION kategori_harga(harga DOUBLE)
+    -> RETURNS VARCHAR(20) 
+    -> BEGIN
+    ->     DECLARE kategori VARCHAR(20); 
+    ->     IF harga < 500000 THEN
+    ->         SET kategori = 'murah';
+    ->     ELSEIF harga >= 500000 AND harga < 3000000 THEN
+    ->         SET kategori = 'sedang';
+    ->     ELSEIF harga >= 3000000 AND harga < 10000000 THEN
+    ->         SET kategori = 'mahal';
+    ->     ELSE
+    ->         SET kategori = 'sangat mahal';
+    ->     END IF;
+    ->     RETURN kategori;
+    -> END $$
+Query OK, 0 rows affected (0.008 sec)
+
+MariaDB [dbpostsib7]> DELIMITER ;
+MariaDB [dbpostsib7]> START TRANSACTION;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [dbpostsib7]> INSERT INTO produk (nama, harga_jual, jenis_produk_id, stok) VALUES ('Produk A', 200000, 1, 50);
+Query OK, 1 row affected (0.006 sec)
+
+MariaDB [dbpostsib7]> INSERT INTO produk (nama, harga_jual, jenis_produk_id, stok) VALUES ('Produk B', 750000, 2, 30);
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [dbpostsib7]> INSERT INTO produk (nama, harga_jual, jenis_produk_id, stok) VALUES ('Produk C', 1500000, 1, 20);
+
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [dbpostsib7]> UPDATE produk SET stok = stok - 5 WHERE nama = 'Produk A';
+Query OK, 1 row affected (0.004 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [dbpostsib7]> SAVEPOINT before_delete;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [dbpostsib7]> DELETE FROM pembayaran WHERE id = 1;
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [dbpostsib7]> ROLLBACK TO before_delete;
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [dbpostsib7]> UPDATE kartu SET iuran = 250000 WHERE id = 1;
+Query OK, 1 row affected (0.000 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [dbpostsib7]> COMMIT;
+Query OK, 0 rows affected (0.005 sec)
