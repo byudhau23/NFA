@@ -17,9 +17,9 @@ MariaDB [dbpostsib7]> CREATE PROCEDURE pro_naikan_harga(IN jenis_produk INT, IN 
     -> END $$
 Query OK, 0 rows affected (0.012 sec)
 
-MariaDB [dbtransaksi]> DELIMITER ;
-MariaDB [dbtransaksi]> DELIMITER $$
-MariaDB [dbtransaksi]> CREATE FUNCTION kategori_harga(harga DOUBLE)
+MariaDB [dbpostsib7]> DELIMITER ;
+MariaDB [dbpostsib7]> DELIMITER $$
+MariaDB [dbpostsib7]> CREATE FUNCTION kategori_harga(harga DOUBLE)
     -> RETURNS VARCHAR(20) 
     -> BEGIN
     ->     DECLARE kategori VARCHAR(20); 
